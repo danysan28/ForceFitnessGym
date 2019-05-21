@@ -1,0 +1,38 @@
+.content__header {
+    text-align: center;
+  }
+  
+  .header-text--orange {
+    font-size: 15px;
+    color: #ffa902;
+  }
+  
+  .header-text--black {
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #333333;
+    padding: 10px;
+  }
+  
+  .content-orderby {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    select {
+      -webkit-appearance: none;
+      border-style: none;
+      border-image: none;
+      background-color: transparent;
+      background-image: url("../../../assets/img/down-orange.png");
+      background-position: top 4px right 0px;
+      background-repeat: no-repeat;
+      // font-family: $fontFamilyFjalla;
+      padding-right: 15px;
+    }
+  }
+  
+  .content-targets {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }

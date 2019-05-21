@@ -1,0 +1,39 @@
+$backgroundLightGrey: #f4f4f4;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: $backgroundLightGrey;
+  text-align: center;
+  z-index: 3;
+  a {
+    display: inline-block;
+    color: #898989;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    &.active {
+      color: #ffab03;
+    }
+    &:hover {
+      background-color: #dddddd;
+    }
+  }
+  .icon__show-menu {
+    display: none;
+  }
+  .right {
+    position: relative;
+    float: right;
+  }
+}
+
+.content {
+  padding: 47px 0px;
+  background-color: $backgroundLightGrey;
+}
+
