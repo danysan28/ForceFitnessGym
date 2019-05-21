@@ -9,16 +9,23 @@ import { modelClass } from '../../models/class';
 })
 export class ClassesComponent implements OnInit {
 
-  classListArray: modelClass[];
+  classListArray: any[];
 
   constructor(private classService: ClassServiceService) { }
 
   ngOnInit() {
     this.classService.getClassList().snapshotChanges().subscribe(item => {
-      console.log(item);
-      item.forEach(element => {
-        // this.classListArray.push(element.payload.toJSON());
+      this.classListArray = [];
+      item.map(c => {
+        let x = c.payload.toJSON();
+        x['$key'] = c.key;
+        this.classListArray.push(x);
       });
+      this.classListArray.sort((a,b) => {
+        return a.price - b.price;
+      });
+      // this.classListArray.reverse();
+      console.log(this.classListArray);
     });
   }
 

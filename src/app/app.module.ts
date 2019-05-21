@@ -16,13 +16,17 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 // Enviroment Config
 import { environment } from '../environments/environment';
+import { TargetClassComponent } from './components/classes/target-class/target-class.component';
+import { InsertStarsComponent } from './components/classes/insert-stars/insert-stars.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ClassesComponent,
-    HomeComponent
+    HomeComponent,
+    TargetClassComponent,
+    InsertStarsComponent
   ],
   imports: [
     BrowserModule,

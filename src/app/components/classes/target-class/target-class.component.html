@@ -1,0 +1,23 @@
+<div class="class-target">
+  <img class="img__back" src="{{ gymClass.image }}" alt="Class Image">
+  <div class="header-text--black">{{ gymClass.name }}</div>
+  <div class="class-target__middle-content">
+    <div class="class-target__price col-4">
+      <div class="class-target__price-sign">$</div>
+      <div class="class-target__price-number">{{ gymClass.price }}</div>
+    </div>
+    <div class="col-4">
+      <img class="img__trainer-profile" src="{{ gymClass.trainer_photo }}" alt="Trainer photo">
+      <div>{{ gymClass.trainer_name }}</div>
+    </div>
+    <div class="class-target__rate" >
+      <i class='fa fa-star text--yellow'></i>
+    </div>
+    <button class="button button--grey header-text--grey">FULL CLASS</button>
+    <div class="content__footer header-text--grey">
+      <div class="col-4"><i class='fa fa-calendar-alt text--yellow'></i>{{ gymClass.date }}</div>
+      <div class="col-4"><i class="fa fa-clock text--yellow"></i>{{ gymClass.schedule }}</div>
+      <div class="col-4"><i class="fa fa-book text--yellow"></i>SESSIONS</div>
+    </div>
+    <div class="line"></div>
+  </div>

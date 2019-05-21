@@ -1,0 +1,83 @@
+.class-target {
+  background-color: white;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+  .img__back {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 300px;
+  }
+  .header-text--black {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.class-target__middle-content {
+  display: flex;
+  // font-family: $fontFamilyRoboto;
+  color: #a0a0a0;
+  font-size: 13px;
+}
+
+.class-target__price {
+  display: inline-flex;
+  color: #f6a516;
+  // font-family: $fontFamilyFjalla;
+  align-self: center;
+  justify-content: center;
+}
+
+.class-target__price-sign {
+  font-size: 25px;
+  padding-top: 3px;
+}
+
+.class-target__price-number {
+  font-size: 50px;
+}
+
+.img__trainer-profile {
+  width: 70px;
+  height: 70px;
+  border-radius: 150px;
+}
+
+.class-target__rate {
+  align-self: center;
+  justify-content: center;
+}
+
+.button {
+  border-style: none;
+  // font-family: $fontFamilyFjalla;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 30px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.button--grey {
+  background-color: #e0e0e0;
+  width: 50%;
+}
+
+.button--orange-border {
+  border: 2px solid #f6a516;
+  width: 15%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.text--yellow {
+    color: #ffc706;
+  }
