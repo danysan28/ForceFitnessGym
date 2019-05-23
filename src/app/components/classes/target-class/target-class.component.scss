@@ -1,6 +1,24 @@
+.content__footer {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  font-size: 12px;
+  i {
+    padding: 0px 5px;
+  }
+}
+
+.line {
+  background-color: #ffc706;
+  height: 5px;
+  border-radius: 3px;
+  margin: 10px auto;
+  width: 90%;
+}
+
 .class-target {
   background-color: white;
-  width: calc(33.33% - 20px);
+  width: 100%;
   margin: 10px;
   border-radius: 10px;
   text-align: center;
@@ -16,11 +34,13 @@
   .header-text--black {
     font-weight: bold;
     font-size: 20px;
+    margin: 10px;
   }
 }
 
 .class-target__middle-content {
   display: flex;
+  flex-wrap: wrap;
   // font-family: $fontFamilyRoboto;
   color: #a0a0a0;
   font-size: 13px;
@@ -59,7 +79,7 @@
   // font-family: $fontFamilyFjalla;
   font-weight: bold;
   font-size: 18px;
-  margin: 30px;
+  margin: 30px auto;
   height: 50px;
   border-radius: 25px;
 }
@@ -79,5 +99,12 @@
 }
 
 .text--yellow {
-    color: #ffc706;
-  }
+  color: #ffc706;
+}
+
+:host {
+  width: calc(33.33% - 12px);
+  margin-right: 12px;
+  display: block;
+}
+

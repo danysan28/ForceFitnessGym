@@ -10,13 +10,15 @@
       <img class="img__trainer-profile" src="{{ gymClass.trainer_photo }}" alt="Trainer photo">
       <div>{{ gymClass.trainer_name }}</div>
     </div>
-    <div class="class-target__rate" >
-      <i class='fa fa-star text--yellow'></i>
+    <div class="class-target__rate col-4">
+      <i *ngFor="let item of arrayOne(5); let i = index"
+        [className]="i<stars ? 'fa fa-star text--yellow' : 'fa fa-star'"></i>
+      <div>{{ gymClass.reviews }} reviews</div>
     </div>
     <button class="button button--grey header-text--grey">FULL CLASS</button>
     <div class="content__footer header-text--grey">
-      <div class="col-4"><i class='fa fa-calendar-alt text--yellow'></i>{{ gymClass.date }}</div>
-      <div class="col-4"><i class="fa fa-clock text--yellow"></i>{{ gymClass.schedule }}</div>
+      <div class="col-4"><i class='fa fa-calendar text--yellow'></i>{{ gymClass.date }}</div>
+      <div class="col-4"><i class="fa fa-clock-o text--yellow"></i>{{ gymClass.schedule }}</div>
       <div class="col-4"><i class="fa fa-book text--yellow"></i>SESSIONS</div>
     </div>
     <div class="line"></div>

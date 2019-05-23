@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { modelClass } from 'src/app/models/class';
 
 @Component({
   selector: 'app-target-class',
@@ -6,11 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./target-class.component.scss']
 })
 export class TargetClassComponent implements OnInit {
-  @Input() gymClass: any;
+  @Input() gymClass: modelClass[];
+  @Input() stars: number;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
+  }
+
+  arrayOne(n: number): any[] {
+    return Array(n);
   }
 
 }

@@ -1,8 +1,6 @@
 <nav class="sticky topnav" id="Topnav">
-  <a href="#home">HOME</a>
-  <a href="#classes">CLASES</a>
-  <a href="#schedule">SCHEDULE</a>
-  <a href="#feedback">FEEDBACK</a>
+  <a *ngFor="let item of itemsNav" href="{{ item.href }}" [class.active]="item.name === selectedItem"
+    (click)="selected(item.name)">{{ item.name }}</a>
 </nav>
 <section class="content" id="home">
   <app-home></app-home>
