@@ -4,14 +4,16 @@
 </div>
 <div class="content-orderby">
   <label class="header-text--orange" for="select-orderby">BY&nbsp;</label>
-  <select class="header-text--orange" name="orderby" ng-model="data.singleSelect" id="select-orderby">
+  <select [(ngModel)]="optionSelected" (change)="changeSelect()" class="header-text--orange" name="orderby">
     <option value="0">PRICE</option>
     <option value="1">RATING</option>
     <option value="2">DATE</option>
   </select>
 </div>
 <div class="content-targets">
-  <app-target-class 
-  *ngFor="let gymClass of classListArray"
-  [gymClass]="gymClass" [stars]="gymClass.rank"></app-target-class>
+  <app-target-class *ngFor="let gymClass of classListArray" [gymClass]="gymClass" [stars]="gymClass.rank">
+  </app-target-class>
+</div>
+<div class="content__header">
+  <button class="button button--grey button--orange-border header-text--grey" (click)="showMore($event)">{{ showMoreText }}</button>
 </div>

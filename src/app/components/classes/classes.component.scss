@@ -18,6 +18,8 @@
     display: flex;
     justify-content: flex-end;
     padding: 10px;
+    width: 80%;
+    margin: auto;
     select {
       -webkit-appearance: none;
       border-style: none;
@@ -37,4 +39,24 @@
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
+  }
+
+  .button {
+    align-self: center;
+    border-style: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 30px;
+    height: 50px;
+    border-radius: 25px;
+  }
+  
+  .button--grey {
+    background-color: #e0e0e0;
+    width: 50%;
+  }
+  
+  .button--orange-border {
+    border: 2px solid #f6a516;
+    width: 15%;
   }

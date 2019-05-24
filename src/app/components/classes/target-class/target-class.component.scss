@@ -16,10 +16,15 @@
   width: 90%;
 }
 
+:host {
+  width: calc(33.33% - 10px);
+  margin: 5px;
+  display: flex;
+}
+
 .class-target {
   background-color: white;
   width: 100%;
-  margin: 10px;
   border-radius: 10px;
   text-align: center;
   padding-bottom: 10px;
@@ -101,10 +106,3 @@
 .text--yellow {
   color: #ffc706;
 }
-
-:host {
-  width: calc(33.33% - 12px);
-  margin-right: 12px;
-  display: block;
-}
-
