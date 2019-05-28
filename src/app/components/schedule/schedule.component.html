@@ -1,0 +1,23 @@
+<div class="content__header">
+  <div class="header-text--orange">FOLLOW</div>
+  <div class="header-text--black">YOUR SCHEDULE</div>
+</div>
+<div class="content__table-schedule">
+  <input type="week" class="form-control header-text--orange" id="Week" />
+  <table id="schedule-table">
+    <tr>
+      <th>MONDAY</th>
+      <th>TUESDAY</th>
+      <th>WEDNESDAY</th>
+      <th>THURSEDAY</th>
+      <th>FRIDAY</th>
+      <th>SATURDAY</th>
+      <th>SUNDAY</th>
+    </tr>
+    <tr *ngFor="let col of scheduleListArray">
+        <td *ngFor="let row of col"> 
+          <div *ngIf="row">{{ row.name }} {{ row.hour }}</div>
+        </td>
+    </tr>
+  </table>
+</div>

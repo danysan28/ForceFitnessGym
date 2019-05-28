@@ -1,28 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   itemsNav = [
-    { href: "#home", name: "HOME" },
-    { href: "#classes", name: "CLASSES" },
-    { href: "#schedule", name: "SCHEDULE" },
-    { href: "#feedback", name: "FEEDBACK" },
+    { href: "home", name: "HOME" },
+    { href: "classes", name: "CLASSES" },
+    { href: "schedule", name: "SCHEDULE" },
+    { href: "feedback", name: "FEEDBACK" },
   ];
 
-  selectedItem: string = "HOME";
+  currentSection = 'home';
 
-  constructor() { }
-
-  ngOnInit() {
+  onSectionChange(sectionId: string) {
+    console.log(sectionId);
+    this.currentSection = sectionId;
   }
 
-  selected(item: string): void{
-    console.log('click');
-    this.selectedItem = item;
+  scrollTo(section) {
+    this.currentSection = section;
+    document.querySelector('#' + section).scrollIntoView();
   }
+  
 }

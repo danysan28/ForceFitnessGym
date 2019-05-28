@@ -1,0 +1,109 @@
+.content__header {
+  text-align: center;
+}
+
+.header-text--orange {
+  font-size: 15px;
+  color: #ffa902;
+}
+
+.header-text--black {
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: #333333;
+  padding: 10px;
+}
+
+#Week {
+  -webkit-appearance: none;
+  border-style: none;
+  background-color: transparent;
+  // font-family: $fontFamilyFjalla;
+  font-size: 20px;
+}
+
+.content__table-schedule {
+  background-color: transparent;
+  width: 80%;
+  margin: 0 auto;
+  table {
+    width: 100%;
+    text-align: center;
+    th {
+      color: white;
+      background-color: #fea901;
+      width: 14.2%;
+      padding: 15px 0px;
+    }
+    .td {
+      padding: 40px 0px;
+    }
+  }
+}
+
+.td--normal {
+  color: black;
+  background-color: #d4d4d4;
+}
+
+.td--hover {
+  color: white;
+  background-color: #313131;
+}
+
+.accordion {
+  color: black;
+  background-color: #d4d4d4;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  // font-family: $fontFamilyFjalla;
+  &.active {
+    color: white;
+    background-color: #fea901;
+    &:after {
+      content: "\2212";
+    }
+  }
+  &:hover {
+    color: white;
+    background-color: #fea901;
+  }
+  &:after {
+    content: "\002B";
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  li {
+    cursor: default;
+    list-style: none;
+    padding: 10px;
+    .class__title {
+      padding: 0;
+    }
+  }
+}
+
+.class__title {
+  display: grid;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.class__hour {
+  font-size: 13px;
+}

@@ -1,0 +1,67 @@
+.content--center{
+    width: 80%;
+    display: inherit;
+    margin: 0 auto;
+    position: inherit;
+}
+
+.content__widgets {
+  background-image: url("../../../assets/img/lifting-weight.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(#000000, #000000);
+    opacity: 0.6;
+  }
+  .content-targets {
+    justify-content: center;
+  }
+}
+
+.widget {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.692);
+  padding: 20px;
+  border: 2px solid transparent;
+  width: calc(20% - 12px);
+  margin: 0px 12px;
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover{    
+    transform: translateY(-10px);
+    border: 2px solid  #ffc706;
+  }
+}
+
+.img__widget {
+  padding: 20px;
+  height: 100px;
+  color: #ffc706;
+  font-size: 120px;
+}
+
+.widget__title {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+.widget__desc {
+  color: white;
+  line-height: 20pt;
+  padding: 20px;
+}

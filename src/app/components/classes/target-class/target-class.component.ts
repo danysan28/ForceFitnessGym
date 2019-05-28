@@ -8,7 +8,6 @@ import { modelClass } from 'src/app/models/class';
 })
 export class TargetClassComponent implements OnInit {
   @Input() gymClass: modelClass[];
-  @Input() stars: number;
 
   namesList: string[] = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 

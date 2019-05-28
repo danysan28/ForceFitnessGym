@@ -7,6 +7,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 export class ClassServiceService {
 
   classList: AngularFireList<any>;
+  scheduleList: AngularFireList<any>;
 
   constructor(private firebasedb: AngularFireDatabase) { }
 
@@ -14,4 +15,10 @@ export class ClassServiceService {
     this.classList = this.firebasedb.list('classes');
     return this.classList;
   }
+
+  getScheduleList(){
+    this.scheduleList = this.firebasedb.list('schedule');
+    return this.scheduleList;
+  }
+
 }
