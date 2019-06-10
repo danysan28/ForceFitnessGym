@@ -1,0 +1,20 @@
+<ngb-carousel class="content-carousel" *ngIf="feedbackList">
+    <ng-template ngbSlide class="carousel" *ngFor="let feedback of feedbackList">
+        <div class="slide">
+            <div class="content__carousel">
+                <div class="content__img-back col-5">
+                    <img class="img__back" src="{{ feedback.img }}" alt="">
+                </div>
+                <div class="desc__carousel col-5">
+                    <div class="content__desc-carousel">
+                        <div class="header-text--orange">FEEDBACK</div>
+                        <div class="header-text--black">TESTIMONIALS
+                            <p>{{ feedback.feedback }}</p>
+                        </div>
+                        <div class="header-text--orange orange-big">{{ feedback.name }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>

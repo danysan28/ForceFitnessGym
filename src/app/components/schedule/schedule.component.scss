@@ -14,7 +14,7 @@
   padding: 10px;
 }
 
-#Week {
+.select__week {
   -webkit-appearance: none;
   border-style: none;
   background-color: transparent;
@@ -29,6 +29,7 @@
   table {
     width: 100%;
     text-align: center;
+    border-collapse: separate;
     th {
       color: white;
       background-color: #fea901;
@@ -37,21 +38,18 @@
     }
     .td {
       padding: 40px 0px;
+      color: black;
+  background-color: #d4d4d4;
+      &:hover, &:focus {
+        color: white;
+        background-color: #313131;
+      }
     }
   }
 }
 
-.td--normal {
-  color: black;
-  background-color: #d4d4d4;
-}
-
-.td--hover {
-  color: white;
-  background-color: #313131;
-}
-
 .accordion {
+  display: none;
   color: black;
   background-color: #d4d4d4;
   cursor: pointer;
@@ -83,10 +81,11 @@
 }
 
 .panel {
-  padding: 0 18px;
+  padding: 18px;
   background-color: white;
-  max-height: 0;
-  overflow: hidden;
+  display: none;
+  // max-height: 0;
+  // overflow: hidden;
   transition: max-height 0.2s ease-out;
   li {
     cursor: default;
@@ -98,6 +97,14 @@
   }
 }
 
+.show {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
 .class__title {
   display: grid;
   padding: 5px;
@@ -106,4 +113,15 @@
 
 .class__hour {
   font-size: 13px;
+}
+
+//Mobile
+@media screen and (max-width: 992px) {
+  .accordion{
+    display: block;
+  }
+
+  .content__table-schedule{
+    display: none;
+  }
 }

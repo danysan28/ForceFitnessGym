@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   itemsNav = [
-    { href: "home", name: "HOME" },
-    { href: "classes", name: "CLASSES" },
-    { href: "schedule", name: "SCHEDULE" },
-    { href: "feedback", name: "FEEDBACK" },
+    { href: "#home", name: "HOME" },
+    { href: "#classes", name: "CLASSES" },
+    { href: "#schedule", name: "SCHEDULE" },
+    { href: "#feedback", name: "FEEDBACK" },
   ];
 
   currentSection = 'home';
@@ -21,9 +21,9 @@ export class NavbarComponent {
     this.currentSection = sectionId;
   }
 
-  scrollTo(section) {
-    this.currentSection = section;
-    document.querySelector('#' + section).scrollIntoView();
-  }
+  // scrollTo(section) {
+  //   this.currentSection = section;
+  //   document.querySelector('#' + section).scrollIntoView();
+  // }
   
 }

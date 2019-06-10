@@ -1,8 +1,19 @@
-<nav class="sticky topnav" id="Topnav">
-  <a *ngFor="let item of itemsNav" [class.active]="item.href === currentSection"
-    (click)="scrollTo(item.href)">{{ item.name }}</a>
+<nav class="navbar navbar-expand-md  topnav sticky">
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+  </button>
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+    <ul class="navbar-nav" *ngFor="let item of itemsNav">
+      <li class="nav-item">
+        <a class="nav-link" [href]="item.href">{{ item.name }}</a>
+      </li>
+    </ul>
+  </div>
 </nav>
-<div id="parentDiv" scrollSpy [spiedTags]="['SECTION']" (sectionChange)="onSectionChange($event)">
+
+<div id="parentDiv" (sectionChange)="onSectionChange($event)">
   <section class="content" id="home">
     <app-home></app-home>
   </section>
@@ -13,72 +24,10 @@
   <section class="content" id="schedule">
     <app-schedule></app-schedule>
   </section>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <section id="feedback">
-
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo doloremque suscipit animi mollitia
-      accusantium. A tempore deleniti exercitationem autem enim voluptates provident veritatis repudiandae. Dignissimos
-      at beatae illum ab.</h1>
+  <section class="content" id="feedback">
+    <app-carousel></app-carousel>
+    <div class="content">
+      <app-feedback-form></app-feedback-form>
+    </div>
   </section>
 </div>

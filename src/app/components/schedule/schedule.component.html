@@ -2,8 +2,9 @@
   <div class="header-text--orange">FOLLOW</div>
   <div class="header-text--black">YOUR SCHEDULE</div>
 </div>
+<input type="week" class="select__week form-control header-text--orange col-md-3 col-s-6 col-xs-12" [(ngModel)]="selectedDate"
+  (change)="onChangeDate()" />
 <div class="content__table-schedule">
-  <input type="week" class="form-control header-text--orange" id="Week" />
   <table id="schedule-table">
     <tr>
       <th>MONDAY</th>
@@ -14,10 +15,23 @@
       <th>SATURDAY</th>
       <th>SUNDAY</th>
     </tr>
-    <tr *ngFor="let col of scheduleListArray">
-        <td *ngFor="let row of col"> 
-          <div *ngIf="row">{{ row.name }} {{ row.hour }}</div>
-        </td>
+    <tr *ngFor="let col of outputArray">
+      <td class="td td--normal" *ngFor="let row of col" tabindex="0">
+        <div *ngIf="row"><span class="class__title">{{ row.name }}</span><span class="class__hour">{{ row.hour }}</span>
+        </div>
+        <div *ngIf="!row"><span class="class__title">&nbsp;</span><span class="class__hour">&nbsp;</span></div>
+      </td>
     </tr>
   </table>
+</div>
+<div *ngFor="let day of weekDays; let i = index">
+  <button class="accordion" [class.active]="panelSelected === day" (click)="showPanel(day)">{{ day }}</button>
+  <div class="panel" [class.show]="panelSelected === day">
+    <ul>
+      <li *ngFor="let col of scheduleListArray[i]">
+        <div *ngIf="col"><span class="class__title">{{ col.name }}</span><span class="class__hour">{{ col.hour }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>

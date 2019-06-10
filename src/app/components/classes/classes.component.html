@@ -4,14 +4,14 @@
 </div>
 <div class="content-orderby">
   <label class="header-text--orange" for="select-orderby">BY&nbsp;</label>
-  <select [(ngModel)]="optionSelected" (change)="changeSelect()" class="header-text--orange" name="orderby">
+  <select class="header-text--orange" [(ngModel)]="optionSelected" (change)="changeSelect()"  name="orderby">
     <option value="0">PRICE</option>
     <option value="1">RATING</option>
     <option value="2">DATE</option>
   </select>
 </div>
 <div class="content-targets">
-  <app-target-class *ngFor="let gymClass of classListArray" [gymClass]="gymClass">
+  <app-target-class *ngFor="let gymClass of classListArraySlide" [gymClass]="gymClass">
   </app-target-class>
 </div>
 <div class="content__header">

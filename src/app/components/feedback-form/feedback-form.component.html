@@ -1,0 +1,6 @@
+<form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback(feedbackForm.value)" class="content__feedback-form">
+  <div class="header-text--black">GIVE YOUR FEEDBACK</div>
+  <input type="text" formControlName="name" class="input__feedback" placeholder="NAME" pattern="[A-Z]{1}[A-Za-z]*" required>
+  <input type="text" formControlName="feedback" class="input__feedback text--area" placeholder="FEEDBACK..." required>
+  <button class="btn__send" type="submit">SEND</button>
+</form>

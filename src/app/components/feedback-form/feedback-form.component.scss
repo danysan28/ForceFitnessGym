@@ -1,0 +1,46 @@
+.content__feedback-form {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  input,
+  textarea {
+    // font-family: $fontFamilyFjalla;
+    width: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    resize: none;
+    &::placeholder {
+      color: rgb(83, 83, 83);
+    }
+  }
+  .header-text--black {
+    width: 50%;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 0;
+  }
+}
+
+.input__feedback {
+  align-self: center;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+  &.text--area {
+    height: 200px;
+    align-self: inherit;
+  }
+}
+
+.btn__send {
+  border-style: none;
+  background-color: #fea901;
+  color: #4a2800;
+//   font-family: $fontFamilyFjalla;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: 50%;
+}
